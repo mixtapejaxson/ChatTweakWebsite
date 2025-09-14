@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import { useState, useEffect, useRef } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -161,7 +162,7 @@ export default function Home() {
   return (
     <div className="min-h-screen text-white overflow-x-hidden">
       <BackgroundEffect />
-
+      <Analytics/>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-6">
         <div className="text-center max-w-5xl mx-auto">
